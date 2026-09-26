@@ -1,0 +1,157 @@
+modelRoles:
+  vision: mistral/pixtral-12b:auto
+  task: TOP - freeinference/deepseek-v4-flash:max
+  plan: TOP - freeinference/glm-5.3
+  smol: TOP - freeinference/glm-5.3-flash:max
+  advisor: openrouter/inclusionai/ling-3.0-flash-fin:free:high
+  slow: TOP - freeinference/glm-5.3:max
+  judge: typesafe/jev-latest
+  tiny: openrouter/thinkingmachines/inkling:free:max
+  commit: mistral/codestral-latest:auto
+  default: TOP - freeinference/glm-5.3-flash:max
+symbolPreset: unicode
+composer:
+  shape: claude
+  tokenRate: false
+theme:
+  dark: titanium
+  light: light
+setupVersion: 2
+hideThinkingBlock: false
+edit:
+  mode: hashline
+  streamingAbort: true
+  fuzzyThreshold: 0.85
+  blackbox:
+    enabled: true
+  autoRepair:
+    enabled: true
+readLineNumbers: false
+bash:
+  enabled: true
+  allowCompoundCommands: true
+browser:
+  headless: false
+  enabled: false
+  idleCloseSec: 900
+colorBlindMode: false
+statusLine:
+  preset: default
+  contextLine: "off"
+  sessionAccent: true
+  separator: powerline-thin
+display:
+  showTokenUsage: false
+  cacheMissMarker: false
+  collapseCompacted: false
+defaultThinkingLevel: max
+externalThinking: false
+followUpMode: all
+steeringMode: all
+interruptMode: immediate
+treeFilterMode: default
+autocompleteMaxVisible: 7
+emojiAutocomplete: true
+tui:
+  vimMode: false
+  vimModeDisplay: none
+completion:
+  notify: "off"
+recap:
+  idleSeconds: 300
+magicKeywords:
+  enabled: true
+  orchestrate: true
+compaction:
+  experimentalContextManagement: false
+  methodOrder:
+    - remote
+    - snapcompact
+    - handoff
+    - soft
+    - shake
+  thresholdPercent: 80
+  handoffSaveToDisk: true
+read:
+  defaultLimit: 300
+astGrep:
+  enabled: false
+shellMinimizer:
+  sourceOutlineLevel: aggressive
+python:
+  kernelMode: session
+fetch:
+  enabled: true
+todo:
+  remindersMax: 3
+  enabled: true
+plan:
+  enabled: true
+  autosave: true
+task:
+  maxRecursionDepth: 0
+  enableLsp: true
+  isolation:
+    enabled: true
+  maxConcurrency: 8
+proseOnlyThinking: true
+personality: none
+ttsr:
+  repeatMode: after-gap
+  repeatGap: 5
+bashInterceptor:
+  enabled: true
+astEdit:
+  enabled: false
+github:
+  enabled: false
+security:
+  enabled: false
+eval:
+  autoBackground:
+    enabled: true
+  py: false
+  js: false
+  tools:
+    enabled: true
+lsp:
+  formatOnWrite: true
+  diagnosticsOnEdit: true
+  enabled: false
+doubleEscapeAction: rewind
+disabledExtensions:
+  []
+advisor:
+  enabled: false
+  syncBacklog: "off"
+inlineToolDescriptors: auto
+glob:
+  enabled: true
+grep:
+  enabled: true
+debug:
+  enabled: false
+launch:
+  enabled: true
+web_search:
+  enabled: true
+tools:
+  xdev: true
+secrets:
+  enabled: true
+find:
+  enabled: "off"
+cycleOrder:
+  - smol
+  - slow
+retry:
+  fallbackChains:
+    default:
+      - TOP - freeinference/glm-5.3-flash
+      - CAP - hyper/deepseek-v4.1-flash
+dev:
+  autoqa: false
+checkpoint:
+  enabled: true
+prewalk:
+  enabled: true

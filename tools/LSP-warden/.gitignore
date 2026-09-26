@@ -1,0 +1,4 @@
+node_modules/
+*.jsonl
+/agent-dump/
+/AGENTS.md
